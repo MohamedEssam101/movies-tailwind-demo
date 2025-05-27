@@ -6,10 +6,6 @@ export default {
             fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
-      backgroundImage: {
-        'homePage' : "url('img/home3.jpg')",
-
-     },
      colors:{
       custom:{
           red: "#ff2c1f",
