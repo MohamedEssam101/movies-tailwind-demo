@@ -7,7 +7,7 @@ export default {
         poppins: ['Poppins', 'sans-serif'],
       },
       backgroundImage: {
-        'homePage' : "url('/img/home3.jpg')",
+        'homePage' : "url('img/home3.jpg')",
 
      },
      colors:{
