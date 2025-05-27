@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  * {
+    @apply m-0 p-0 box-border list-none no-underline;
+    scroll-padding-top: 2rem;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  html::-webkit-scrollbar {
+    @apply w-2 bg-black;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    @apply bg-custom-red rounded-full;
+  }
+
+  body {
+    @apply font-poppins bg-black text-white;
+  }
+  section {
+    @apply py-[50px] px-[4%] lg:py-[4.5rem] lg:px-[1.5rem];
+  }
+  header {
+    @apply z-50 fixed top-0 right-0 w-full flex justify-between items-center 
+    px-[4%] py-[12px] sm:py-[12px] md:py-[18px] lg:px-24 lg:py-5 transition duration-500;
+  }
+  header.shadow {
+    @apply bg-white shadow-slate-950;
+  }
+
+  header.shadow #menu-icon {
+    @apply text-black;
+  }
+  header .logo {
+    @apply text-lg font-semibold text-white flex items-center gap-x-2;
+  }
+  .logo i {
+    @apply text-2xl text-red-500;
+  }
+  .navbar-elements {
+    @apply relative  text-black font-medium hover:text-custom-red duration-300 md:text-custom-red;
+  }
+
+  .navbar-elements::after {
+    @apply absolute -bottom-[4px] left-0 w-0 h-[3px] bg-custom-red transition-all duration-500 ease-linear;
+    content: "";
+  }
+
+  .navbar-elements.home-active {
+    @apply text-custom-red;
+  }
+  .navbar-elements:hover::after,
+  .navbar-elements.home-active::after {
+    @apply w-full;
+  }
+  .heading {
+    @apply font-medium text-[1.2rem] uppercase border-b-[1px] border-solid border-custom-red max-w-[1000px] mr-auto ml-auto;
+  }
+  .box .box-img {
+    @apply w-full h-[270px];
+  }
+  .box-img img {
+    @apply w-full h-full object-cover cursor-pointer transition-all duration-[20] ease-linear hover:-translate-y-[10px];
+  }
+  .box h3 {
+    @apply text-[0.9rem] font-medium text-custom-red;
+  }
+  .box span {
+    @apply text-[13px];
+  }
+
+  .social-icons {
+    @apply flex w-14 h-14 items-center rounded-full text-[2rem] text-center justify-center leading-[55px] bg-white text-custom-red border-4 border-solid border-black transition-all duration-200 ease-linear hover:bg-custom-redHover hover:text-white;
+  }
+}
